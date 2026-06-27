@@ -93,6 +93,56 @@ const WHATSAPP = {
   window.addEventListener("scroll", updateProgress, { passive: true });
   window.addEventListener("resize", updateProgress);
 
+  // Carrosséis (Equipe e Espaço): 3 por vez no PC/TV, 1 no celular, troca a cada 8s + setas
+  document.querySelectorAll("[data-carousel]").forEach(function (car) {
+    const track = car.querySelector(".car-track");
+    const slides = Array.prototype.slice.call(track ? track.children : []);
+    const prev = car.querySelector(".car-prev");
+    const next = car.querySelector(".car-next");
+    if (!track || slides.length === 0) return;
+    let index = 0;
+    let timer = null;
+    const delay = parseInt(car.getAttribute("data-autoplay"), 10) || 8000;
+
+    function per() {
+      return parseInt(getComputedStyle(car).getPropertyValue("--per"), 10) || 1;
+    }
+    function maxIndex() {
+      return Math.max(0, slides.length - per());
+    }
+    function apply() {
+      const w = slides[0].getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(track).gap) || 0;
+      track.style.transform = "translateX(" + -index * (w + gap) + "px)";
+      const hide = maxIndex() <= 0;
+      if (prev) prev.style.display = hide ? "none" : "";
+      if (next) next.style.display = hide ? "none" : "";
+    }
+    function go(i) {
+      const m = maxIndex();
+      index = i > m ? 0 : i < 0 ? m : i;
+      apply();
+    }
+    function start() {
+      stop();
+      if (slides.length > per()) timer = setInterval(function () { go(index + 1); }, delay);
+    }
+    function stop() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+    if (prev) prev.addEventListener("click", function () { go(index - 1); start(); });
+    if (next) next.addEventListener("click", function () { go(index + 1); start(); });
+    car.addEventListener("mouseenter", stop);
+    car.addEventListener("mouseleave", start);
+    let rt;
+    window.addEventListener("resize", function () {
+      clearTimeout(rt);
+      rt = setTimeout(function () { index = Math.min(index, maxIndex()); apply(); }, 150);
+    });
+    apply();
+    start();
+  });
+
   // Ano no rodapé
   const y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();

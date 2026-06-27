@@ -28,7 +28,7 @@
     <div class="rail-track"><span class="rail-fill" id="railFill"></span></div>
     <a href="#inicio" class="rail-dot" data-label="Início" aria-label="Ir para Início"></a>
     <a href="#sobre" class="rail-dot" data-label="Sobre a Dra." aria-label="Ir para Sobre"></a>
-    <a href="#areas" class="rail-dot" data-label="Áreas de Atuação" aria-label="Ir para Áreas"></a>
+    <a href="#areas" class="rail-dot" data-label="Nossos Atendimentos" aria-label="Ir para Nossos Atendimentos"></a>
     <a href="#equipe" class="rail-dot" data-label="Equipe" aria-label="Ir para Equipe"></a>
     <a href="#espaco" class="rail-dot" data-label="Nosso Espaço" aria-label="Ir para Nosso Espaço"></a>
     <a href="#depoimentos" class="rail-dot" data-label="Depoimentos" aria-label="Ir para Depoimentos"></a>
@@ -49,7 +49,7 @@
 
       <nav class="nav" id="nav">
         <a href="#sobre">Sobre a Dra.</a>
-        <a href="#areas">Áreas</a>
+        <a href="#areas">Atendimentos</a>
         <a href="#equipe">Equipe</a>
         <a href="#espaco">Espaço</a>
         <a href="#localizacao">Localização</a>
@@ -147,7 +147,7 @@
     <section class="section areas" id="areas">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Áreas de Atuação</span>
+          <span class="eyebrow">Nossos Atendimentos</span>
           <h2>Cuidado especializado em cada fase da sua vida</h2>
           <p class="section-sub">Atendimento humanizado aliado à mais alta qualificação técnica, para você se sentir acolhida e segura.</p>
         </div>
@@ -197,47 +197,48 @@
           <p class="section-sub">A Clínica Baldacini reúne profissionais parceiros que atendem em nossos consultórios, ampliando o cuidado integral à sua saúde.</p>
         </div>
 
-        <div class="team-grid">
-          <!-- ▼▼ MODELO DE PROFISSIONAL — duplique este bloco <article> para cada parceiro.
-               1) Troque a foto: coloque o arquivo em assets/img/ e atualize o src (remova a classe "placeholder").
-               2) Atualize nome, especialidade/CRM e descrição.
-               3) Se o profissional tiver site, atualize o href; se NÃO tiver, apague a linha do <a class="member-link">. ▼▼ -->
-          <article class="member reveal">
-            <div class="member-photo">
-              <img src="assets/img/logo.png" alt="Profissional parceiro" class="placeholder" />
-            </div>
-            <div class="member-body">
-              <h3>Nome do Profissional</h3>
-              <span class="member-role">Especialidade · CRM-SP 00.000</span>
-              <p>Breve descrição da atuação, formação e diferenciais do profissional.</p>
-              <a href="#" target="_blank" rel="noopener" class="member-link">Visitar site ↗</a>
-            </div>
-          </article>
+        <!-- Carrossel: 3 por vez no PC/TV, 1 por vez no celular, troca a cada 8s + setas -->
+        <div class="carousel" data-carousel data-autoplay="8000">
+          <button class="car-btn car-prev" type="button" aria-label="Profissional anterior">‹</button>
+          <div class="car-viewport">
+            <div class="car-track">
+              <!-- ▼▼ MODELO DE PROFISSIONAL — duplique este <article class="member car-slide"> para cada parceiro.
+                   1) Troque a foto (assets/img/) e remova a classe "placeholder".
+                   2) Atualize nome, especialidade/CRM e descrição.
+                   3) Se tiver site, ajuste o href; se não, apague a linha do <a class="member-link">. ▼▼ -->
+              <article class="member car-slide">
+                <div class="member-photo"><img src="assets/img/logo.png" alt="Profissional parceiro" class="placeholder" /></div>
+                <div class="member-body">
+                  <h3>Nome do Profissional</h3>
+                  <span class="member-role">Especialidade · CRM-SP 00.000</span>
+                  <p>Breve descrição da atuação, formação e diferenciais do profissional.</p>
+                  <a href="#" target="_blank" rel="noopener" class="member-link">Visitar site ↗</a>
+                </div>
+              </article>
 
-          <article class="member reveal">
-            <div class="member-photo">
-              <img src="assets/img/logo.png" alt="Profissional parceiro" class="placeholder" />
-            </div>
-            <div class="member-body">
-              <h3>Nome do Profissional</h3>
-              <span class="member-role">Especialidade · CRM-SP 00.000</span>
-              <p>Breve descrição da atuação, formação e diferenciais do profissional.</p>
-              <a href="#" target="_blank" rel="noopener" class="member-link">Visitar site ↗</a>
-            </div>
-          </article>
+              <article class="member car-slide">
+                <div class="member-photo"><img src="assets/img/logo.png" alt="Profissional parceiro" class="placeholder" /></div>
+                <div class="member-body">
+                  <h3>Nome do Profissional</h3>
+                  <span class="member-role">Especialidade · CRM-SP 00.000</span>
+                  <p>Breve descrição da atuação, formação e diferenciais do profissional.</p>
+                  <a href="#" target="_blank" rel="noopener" class="member-link">Visitar site ↗</a>
+                </div>
+              </article>
 
-          <article class="member reveal">
-            <div class="member-photo">
-              <img src="assets/img/logo.png" alt="Profissional parceiro" class="placeholder" />
+              <article class="member car-slide">
+                <div class="member-photo"><img src="assets/img/logo.png" alt="Profissional parceiro" class="placeholder" /></div>
+                <div class="member-body">
+                  <h3>Nome do Profissional</h3>
+                  <span class="member-role">Especialidade · CRM-SP 00.000</span>
+                  <p>Breve descrição da atuação, formação e diferenciais do profissional.</p>
+                  <a href="#" target="_blank" rel="noopener" class="member-link">Visitar site ↗</a>
+                </div>
+              </article>
+              <!-- ▲▲ fim do modelo ▲▲ -->
             </div>
-            <div class="member-body">
-              <h3>Nome do Profissional</h3>
-              <span class="member-role">Especialidade · CRM-SP 00.000</span>
-              <p>Breve descrição da atuação, formação e diferenciais do profissional.</p>
-              <a href="#" target="_blank" rel="noopener" class="member-link">Visitar site ↗</a>
-            </div>
-          </article>
-          <!-- ▲▲ fim do modelo ▲▲ -->
+          </div>
+          <button class="car-btn car-next" type="button" aria-label="Próximo profissional">›</button>
         </div>
 
         <p class="team-note reveal">Em breve: fotos e informações completas da nossa equipe de parceiros.</p>
@@ -253,15 +254,20 @@
           <p class="section-sub">A Clínica Baldacini foi planejada para oferecer acolhimento, privacidade e bem-estar em cada detalhe.</p>
         </div>
 
-        <!-- ▼▼ GALERIA DE FOTOS — quando tiver as fotos do espaço:
-             coloque os arquivos em assets/img/ e troque cada bloco abaixo por:
-             <figure class="gphoto reveal"><img src="assets/img/espaco-1.jpg" alt="Recepção da clínica" /></figure> ▼▼ -->
-        <div class="gallery">
-          <figure class="gphoto reveal"><div class="gphoto-ph"><span>📷</span><small>Foto em breve</small></div></figure>
-          <figure class="gphoto reveal"><div class="gphoto-ph"><span>📷</span><small>Foto em breve</small></div></figure>
-          <figure class="gphoto reveal"><div class="gphoto-ph"><span>📷</span><small>Foto em breve</small></div></figure>
-          <figure class="gphoto reveal"><div class="gphoto-ph"><span>📷</span><small>Foto em breve</small></div></figure>
-          <figure class="gphoto reveal"><div class="gphoto-ph"><span>📷</span><small>Foto em breve</small></div></figure>
+        <!-- ▼▼ GALERIA EM CARROSSEL — quando tiver as fotos, troque cada bloco por:
+             <figure class="gphoto car-slide"><img src="assets/img/espaco-1.jpg" alt="Recepção da clínica" /></figure> ▼▼ -->
+        <div class="carousel" data-carousel data-autoplay="8000">
+          <button class="car-btn car-prev" type="button" aria-label="Foto anterior">‹</button>
+          <div class="car-viewport">
+            <div class="car-track">
+              <figure class="gphoto car-slide"><div class="gphoto-ph"><span>📷</span><small>Foto em breve</small></div></figure>
+              <figure class="gphoto car-slide"><div class="gphoto-ph"><span>📷</span><small>Foto em breve</small></div></figure>
+              <figure class="gphoto car-slide"><div class="gphoto-ph"><span>📷</span><small>Foto em breve</small></div></figure>
+              <figure class="gphoto car-slide"><div class="gphoto-ph"><span>📷</span><small>Foto em breve</small></div></figure>
+              <figure class="gphoto car-slide"><div class="gphoto-ph"><span>📷</span><small>Foto em breve</small></div></figure>
+            </div>
+          </div>
+          <button class="car-btn car-next" type="button" aria-label="Próxima foto">›</button>
         </div>
         <!-- ▲▲ fim da galeria ▲▲ -->
       </div>
@@ -311,9 +317,19 @@
     <!-- ============ LOCALIZAÇÃO / CONTATO ============ -->
     <section class="section localizacao" id="localizacao">
       <div class="container localizacao-inner">
-        <div class="loc-copy reveal">
+        <div class="loc-header reveal">
           <span class="eyebrow">Localização</span>
           <h2>Onde estamos</h2>
+        </div>
+
+        <div class="loc-map reveal">
+          <iframe
+            title="Mapa — Clínica Baldacini, Av. Regente Feijó 944"
+            src="https://maps.google.com/maps?q=Av.%20Regente%20Feij%C3%B3%2C%20944%2C%20S%C3%A3o%20Paulo%20-%20SP&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+
+        <div class="loc-body reveal">
           <p class="section-sub">A Clínica Baldacini foi pensada para proporcionar conforto e privacidade em um ambiente acolhedor.</p>
 
           <ul class="contato-list">
@@ -324,7 +340,7 @@
               </div>
             </li>
             <li>
-              <span class="ci">💬</span>
+              <span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></span>
               <div><strong>WhatsApp</strong><a href="tel:+5511940121589">(11) 94012-1589</a></div>
             </li>
             <li>
@@ -334,11 +350,11 @@
               </div>
             </li>
             <li>
-              <span class="ci">✉️</span>
+              <span class="ci"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"/><path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"/><polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"/><path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8C4.924,8,3,9.924,3,12.298z"/><path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8C43.076,8,45,9.924,45,12.298z"/></svg></span>
               <div><strong>E-mail</strong><a href="mailto:clinicaiarabaldacini@gmail.com">clinicaiarabaldacini@gmail.com</a></div>
             </li>
             <li>
-              <span class="ci">📷</span>
+              <span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="igGrad" cx="30%" cy="107%" r="135%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><path fill="url(#igGrad)" d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.2 1 .45 1.4.85.4.4.65.8.85 1.4.17.4.36 1 .42 2.2.07 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 1.8-.42 2.2-.2.6-.45 1-.85 1.4-.4.4-.8.65-1.4.85-.4.17-1 .36-2.2.42-1.3.07-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.8-.25-2.2-.42-.6-.2-1-.45-1.4-.85-.4-.4-.65-.8-.85-1.4-.17-.4-.36-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-1.8.42-2.2.2-.6.45-1 .85-1.4.4-.4.8-.65 1.4-.85.4-.17 1-.36 2.2-.42C8.4 2.2 8.8 2.2 12 2.2m0 2.16c-3.14 0-3.51.01-4.75.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.75s.01 3.51.07 4.75c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.75.07s3.51-.01 4.75-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.75s-.01-3.51-.07-4.75c-.04-.9-.19-1.39-.32-1.71-.17-.43-.37-.74-.69-1.06-.32-.32-.63-.52-1.06-.69-.32-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.75-.07m0 3.68A4.96 4.96 0 1 0 12 17a4.96 4.96 0 0 0 0-9.92m0 8.18A3.22 3.22 0 1 1 12 8.78a3.22 3.22 0 0 1 0 6.44m6.31-8.4a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0"/></svg></span>
               <div><strong>Instagram</strong><a href="https://instagram.com/draiarabaldacini" target="_blank" rel="noopener">@draiarabaldacini</a></div>
             </li>
             <li>
@@ -351,13 +367,6 @@
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.6-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6 1.9.8 2.6.9 3.5.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2"/></svg>
             Agendar pelo WhatsApp
           </a>
-        </div>
-
-        <div class="loc-map reveal">
-          <iframe
-            title="Mapa — Clínica Baldacini, Av. Regente Feijó 944"
-            src="https://maps.google.com/maps?q=Av.%20Regente%20Feij%C3%B3%2C%20944%2C%20S%C3%A3o%20Paulo%20-%20SP&t=&z=16&ie=UTF8&iwloc=&output=embed"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
       </div>
     </section>
@@ -419,7 +428,7 @@
       <nav class="footer-nav">
         <strong>Navegação</strong>
         <a href="#sobre">Sobre a Dra.</a>
-        <a href="#areas">Áreas de Atuação</a>
+        <a href="#areas">Nossos Atendimentos</a>
         <a href="#equipe">Equipe</a>
         <a href="#espaco">Nosso Espaço</a>
         <a href="#localizacao">Localização</a>
