@@ -212,11 +212,14 @@ h3, h4 { font-family: var(--font-subtitle); font-weight: 500; line-height: 1.2; 
 
 /* ---------- Áreas (cards) ---------- */
 .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 34px 28px; box-shadow: var(--shadow-sm); transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .3s; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .3s; }
 .card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: var(--pink-200); }
-.card-icon { width: 62px; height: 62px; border-radius: 18px; background: var(--grad-soft); display: grid; place-items: center; font-size: 1.7rem; margin-bottom: 22px; box-shadow: inset 0 0 0 1px var(--pink-200); }
-.card h3 { font-size: 1.28rem; margin-bottom: 10px; color: var(--plum-800); }
-.card p { color: var(--muted); font-size: .96rem; }
+.card-media { aspect-ratio: 16/11; overflow: hidden; background: var(--grad-soft); }
+.card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+.card:hover .card-media img { transform: scale(1.06); }
+.card-body { padding: 24px 24px 28px; }
+.card h3 { font-size: 1.22rem; margin-bottom: 10px; color: var(--plum-800); }
+.card p { color: var(--muted); font-size: .95rem; }
 
 /* ---------- Equipe / Parceiros ---------- */
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
