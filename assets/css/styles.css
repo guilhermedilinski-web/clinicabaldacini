@@ -328,6 +328,11 @@ h3, h4 { font-family: var(--font-subtitle); font-weight: 500; line-height: 1.2; 
   .hero-visual, .sobre-media { max-width: 440px; margin-inline: auto; }
   .sobre-media { position: static; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
+  /* No mobile/tablet, mostra o texto do "Sobre" antes da foto,
+     evitando duas fotos grandes coladas logo após o hero */
+  .sobre-inner { gap: 36px; }
+  .sobre-copy { order: 1; }
+  .sobre-media { order: 2; }
 }
 @media (max-width: 900px) {
   .scroll-rail { display: none; }
